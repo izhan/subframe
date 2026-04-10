@@ -18,10 +18,18 @@ Annotations let you add implementation notes to your design. They are used by pr
 
 You should see blue dots on elements for each annotation.
 
+## Using annotations as implementation notes
+
+Annotations are a great place to leave implementation notes while you're designing — things like desired behaviors, edge cases, or interaction details that aren't obvious from the visual design alone.
+
+Because annotations are tied directly to elements, they act as a bridge between design and code. You won't have to remember what you intended during handoff — your notes are already attached to the right elements and ready to be picked up by whoever (or whatever) implements the design.
+
 ## Exporting to code
 
-Annotations are also useful for documenting your design for handoff. Any annotation will be exported as comments in code:
+Any annotation you add is automatically exported as a comment in your component's code:
 
 <Frame>
   <img src="/images/prototype-mode/annotation-as-code.png" alt="Annotation persisted as code comment" />
 </Frame>
+
+This means when an AI coding agent — like Claude Code using the [Subframe MCP server](/developers/mcp) — pulls down your component, it will read your annotations as code comments and use them to implement the behaviors you described. Your design-time notes become direct instructions for the AI during implementation, making the handoff seamless.
